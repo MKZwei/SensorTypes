@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">SensorTypes</string>
+    <string name="Beschleunigung">Acceleration in  m/s²</string>
+    <string name="Feldstaerke">Magnetic sensor in μT</string>
+    <string name="Gyroskop">Gyroscope in rad/s</string>
+    <string name="Linearbeschleunigung">Linear Acceleration in  m/s²</string>
+    <string name="Gravitation">Gravity in  m/s²</string>
+    <string name="Rotation">Rotation around the axes in degrees</string>
+    <string name="Luftdruck">Ambient air Pressure in hPa</string>
+    <string name="Schritte">Step counter</string>
+    <string name="Beschleunigungssensoren">Motion sensors</string>
+    <string name="Positionssensoren">Position sensors</string>
+    <string name="Umgebungssensoren">Environment sensors</string>
+    <string name="Luftfeuchtigkeit">Ambient relative humidity</string>
+    <string name="Naeherungssensor">"Proximity sensor "</string>
+    <string name="Orientierungssensor">Position sensor in degrees</string>
+    <string name="Aufnahme">Rec</string>
+    <string name="Stop">Stop</string>
+    <string name="Start">Start</string>
+    <string name="Vorhanden">Sensor not available!</string>
+    <string name="Nah">"Close "</string>
+    <string name="Fern">"Far "</string>
+    <string name="Schrittzahl">Steps</string>
+</resources>

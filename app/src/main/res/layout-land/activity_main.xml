@@ -1,0 +1,388 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="1dp"
+    tools:context=".MainActivity">
+    <!-- Tabellenanordnung -->
+    <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="5dp"
+        tools:context=".MainActivity">
+        <!-- Bewegungssensoren -->
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+            <TextView
+                android:layout_weight=".8"
+                android:layout_width="0dp"
+                android:layout_height="28dp"
+                android:id="@+id/bews"
+                android:textStyle="bold"
+                android:textSize="15sp"
+                android:text="@string/Beschleunigungssensoren"
+                android:background="#37AEE4"
+                android:layout_column="0"/>
+            <TextView
+                android:layout_weight=".2"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:id="@+id/spacebewegung"
+                android:background="#37AEE4"
+                android:layout_column="1"/>
+        </TableRow>
+        <!-- 1. Zeile fuer die Beschleunigung und Beschleunigungswerte -->
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+            <TextView
+                android:layout_weight=".4"
+                android:id="@+id/acc"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:textStyle="bold"
+                android:text="@string/Beschleunigung"
+                android:layout_column="0"/>
+
+            <TextView
+                android:layout_weight=".4"
+                android:id="@+id/accwerte"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_column="1"
+                />
+            <CheckBox
+                android:id="@+id/checkAcc"
+                android:layout_weight=".2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_column="2"
+                android:text="@string/Aufnahme"
+                android:textStyle="bold"
+                />
+        </TableRow>
+
+        <!-- 2. Zeile fuer die Winkelgeschwindigkeit und Winkelgeschwindigkeitswerte(Gyroskop) -->
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+            <TextView
+                android:layout_weight=".4"
+                android:id="@+id/gyr"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:textStyle="bold"
+                android:layout_column="0"
+                android:text="@string/Gyroskop"/>
+            <TextView
+                android:layout_weight=".4"
+                android:id="@+id/gyrwerte"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_column="1"
+                />
+            <CheckBox
+                android:id="@+id/checkGyr"
+                android:layout_weight=".2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_column="2"
+                android:text="@string/Aufnahme"
+                android:textStyle="bold" />
+        </TableRow>
+
+        <!-- 3. Zeile Schrittzaehler -->
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            >
+            <TextView
+                android:layout_weight=".4"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:id="@+id/step"
+                android:text="@string/Schritte"
+                android:textStyle="bold"
+                android:layout_column="0"/>
+            <TextView
+                android:id="@+id/stepwerte"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".4"
+                android:layout_column="1"
+                />
+            <CheckBox
+                android:id="@+id/checkStep"
+                android:layout_weight=".2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_column="2"
+                android:text="@string/Aufnahme"
+                android:textStyle="bold" />
+        </TableRow>
+
+        <!-- 4 Zeile: Lineare Beschleunigung(Text und Werte) -->
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <TextView
+                android:layout_weight=".4"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:id="@+id/lin"
+                android:text="@string/Linearbeschleunigung"
+                android:textStyle="bold"
+                android:layout_column="0"/>
+            <TextView
+                android:id="@+id/linwerte"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".4"
+                android:layout_column="1"
+                />
+            <CheckBox
+                android:id="@+id/checkLin"
+                android:layout_weight=".2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_column="2"
+                android:text="@string/Aufnahme"
+                android:textStyle="bold" />
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1" >
+            <TextView
+                android:id="@+id/grav"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".4"
+                android:text="@string/Gravitation"
+                android:textStyle="bold"
+                android:layout_column="0"/>
+            <TextView
+                android:id="@+id/gravwerte"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".4"
+                android:layout_column="1"/>
+            <CheckBox
+                android:id="@+id/checkGrav"
+                android:layout_weight=".2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_column="2"
+                android:text="@string/Aufnahme"
+                android:textStyle="bold" />
+
+        </TableRow>
+
+
+        <!-- Positionssensoren -->
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="27dp"
+                android:layout_weight=".8"
+                android:id="@+id/pos"
+                android:textStyle="bold"
+                android:textSize="15sp"
+                android:background="#37AEE4"
+                android:text="@string/Positionssensoren"
+                android:layout_column="0"/>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".2"
+                android:id="@+id/spacebewegung2"
+                android:background="#37AEE4"
+                android:layout_column="1"/>
+        </TableRow>
+        <!-- 10. Zeile Naeherungssensor -->
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+            <TextView
+                android:id="@+id/nah"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".4"
+                android:text="@string/Naeherungssensor"
+                android:textStyle="bold"
+                android:layout_column="0"/>
+            <TextView
+                android:id="@+id/nahwerte"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".4"
+                android:layout_column="1"
+                />
+            <CheckBox
+                android:id="@+id/checkProx"
+                android:layout_weight=".2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_column="2"
+                android:text="@string/Aufnahme"
+                android:textStyle="bold"/>
+        </TableRow>
+
+        <!-- 7. Zeile fuer das MAgnetische Feld -->
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+            <TextView
+                android:id="@+id/mag"
+                android:layout_weight=".4"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:textStyle="bold"
+                android:layout_column="0"
+                android:text="@string/Feldstaerke" />
+            <TextView
+                android:id="@+id/magwerte"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".4"
+                android:layout_column="1"
+                 />
+            <CheckBox
+                android:id="@+id/checkMag"
+                android:layout_weight=".2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_column="2"
+                android:text="@string/Aufnahme"
+                android:textStyle="bold" />
+        </TableRow>
+        <!-- 7. Zeile fuer den Orientierungssensor  -->
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+            <TextView
+                android:layout_weight=".4"
+                android:id="@+id/orient"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:textStyle="bold"
+                android:layout_column="0"
+                android:text="@string/Orientierungssensor" />
+            <TextView
+                android:layout_weight=".4"
+                android:id="@+id/orientwert"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_column="1"
+                />
+            <CheckBox
+                android:id="@+id/checkOrient"
+                android:layout_weight=".2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_column="2"
+                android:text="@string/Aufnahme"
+                android:textStyle="bold" />
+        </TableRow>
+        <!-- Umgebungsvektoren -->
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+            <TextView
+                android:layout_weight=".8"
+                android:layout_width="0dp"
+                android:layout_height="28dp"
+                android:id="@+id/umg"
+                android:textStyle="bold"
+                android:textSize="15sp"
+                android:background="#37AEE4"
+                android:text="@string/Umgebungssensoren"
+                android:layout_column="0"/>
+            <TextView
+                android:layout_weight=".2"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:id="@+id/spacebewegung3"
+                android:background="#37AEE4"
+                android:layout_column="1"/>
+        </TableRow>
+
+
+        <!-- 9. Zeile Luftdruck -->
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+            <TextView
+                android:layout_weight=".4"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:id="@+id/luft"
+                android:text="@string/Luftdruck"
+                android:textStyle="bold"
+                android:layout_column="0"/>
+            <TextView
+                android:id="@+id/luftwerte"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".4"
+                android:layout_column="1" />
+            <CheckBox
+                android:id="@+id/checkPress"
+                android:layout_weight=".2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_column="2"
+                android:text="@string/Aufnahme"
+                android:textStyle="bold" />
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+            <Button
+                android:id="@+id/startButton"
+                android:layout_weight=".1"
+                android:layout_height="35dp"
+                android:layout_width="0dp"
+                android:text="@string/Start"
+                android:layout_column="0"
+                android:background="#fafafa"/>
+            <Button
+                android:id="@+id/stopButton"
+                android:layout_weight=".1"
+                android:layout_height="35dp"
+                android:layout_width="0dp"
+                android:text="@string/Stop"
+                android:layout_column="1"
+                android:background="#fafafa"/>
+            <TextView
+                android:layout_weight=".8"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_column="2" />
+        </TableRow>
+
+
+    </TableLayout>
+</LinearLayout>

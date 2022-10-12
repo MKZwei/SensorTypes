@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">SensorTypes</string>
+    <string name="Beschleunigung">Beschleunigung in m/m/s²</string>
+    <string name="Gyroskop">Gyroskop in rad/s</string>
+    <string name="Feldstaerke">Magnetsensor in μT</string>
+    <string name="Linearbeschleunigung">Lineare Beschleunigung in m/s²</string>
+    <string name="Gravitation">Schwerkraft in  m/s²</string>
+    <string name="Rotation">Rotation um die Achsen in Grad</string>
+    <string name="Luftdruck">Luftdruck in hPa</string>
+    <string name="Schritte">Schrittzähler</string>
+    <string name="Beschleunigungssensoren">Bewegungsssensoren</string>
+    <string name="Positionssensoren">Positionssensoren</string>
+    <string name="Umgebungssensoren">Umgebungssensoren</string>
+    <string name="Luftfeuchtigkeit">Relative Luftfeuchtigkeit in %</string>
+    <string name="Naeherungssensor">"Näherungssensor "</string>
+    <string name="Orientierungssensor">Lagesensor in Grad</string>
+    <string name="Aufnahme">Rec</string>
+    <string name="Stop">Stop</string>
+    <string name="Start">Start</string>
+    <string name="Vorhanden">Sensor nicht vorhanden!</string>
+    <string name="Nah">Nah</string>
+    <string name="Fern">Fern</string>
+    <string name="Schrittzahl">Schritte</string>
+</resources>
